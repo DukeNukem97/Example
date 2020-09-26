@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    to left,
+    rgb(75, 86, 92),
+    rgb(22, 129, 161)
+  );
+}
+.myTodo h2 {
+  text-align: center;
+  font-size: 4rem;
+  padding: 30px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+form input {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 340px;
+  height: 40px;
+  border-radius: 5px 0px 0px 5px;
+  outline: none;
+  border: 0;
+  font-family: "Epilogue", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(75, 74, 74);
+}
+form button {
+  cursor: pointer;
+  border-radius: 0px 5px 5px 0px;
+  background: rgb(75, 86, 92);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border: 0px;
+  outline: none;
+}
+form button:hover {
+  color: rgb(22, 129, 161);
+  background: white;
+}
+.theListContainer {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 360px;
+}
+.todoList {
+  text-align: justify;
+  border-radius: 5px;
+  margin-top: 20px;
+  background: rgb(75, 86, 92);
+  min-height: 40px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.todoList li {
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  list-style: none;
+  flex: 1;
+}
+
+.complete-btn,
+.trash-btn {
+  cursor: pointer;
+  width: 30px;
+  height: 40px;
+  outline: none;
+  border: none;
+  margin-right: 1px;
+  color: rgb(75, 86, 92);
+  background: rgba(255, 255, 255, 0.76);
+}
+.trash-btn {
+  border-radius: 0 5px 5px 0;
+}
+.complete-btn:hover {
+  color: rgb(5, 202, 5);
+  background: rgb(75, 86, 92);
+}
+.trash-btn:hover {
+  color: red;
+  background: rgb(75, 86, 92);
+}
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.deleteIt {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.completeIt {
+  opacity: 0.4;
+}
+.filters {
+  font-family: "Epilogue", sans-serif;
+  font-weight: bold;
+  position: relative;
+  width: 160px;
+}
+option {
+  font-family: "Epilogue", sans-serif;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  width: 150px;
+  padding: 8px;
+  cursor: pointer;
+}
+.filters::after {
+  text-align: center;
+  content: "+";
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  top: 0px;
+  left: 120px;
+  pointer-events: none;
+  width: 30px;
+  height: 32px;
+  border-radius: 0px 5px 5px 0;
+}
+.filters:hover::after {
+  background: rgb(75, 86, 92);
+  color: white;
+}
+.mainContainer {
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 538px) {
+  .filters {
+    margin-top: 25px;
+  }
+}

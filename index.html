@@ -3,9 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Hello</h1>
+    <div class="myTodoApp">
+      <div class="myTodo">
+        <h2>ToDo</h2>
+        <div class="mainContainer">
+          <div class="filters">
+            <select name="filter" id="filter">
+              <option value="all" selected>All</option>
+              <option value="completed">Completed</option>
+              <option value="uncompleted">Uncompleted</option>
+            </select>
+          </div>
+          <div class="form">
+            <form>
+              <input type="text" id="todos" name="todo" autocomplete="off" />
+              <button id="submit">
+                <i class="fas fa-clipboard-list fa-lg"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="theContainer">
+        <ul class="theListContainer"></ul>
+      </div>
+    </div>
+
+    <script src="todo.js"></script>
   </body>
 </html>
